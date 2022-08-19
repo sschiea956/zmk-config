@@ -1,0 +1,6 @@
+if SHIELD_ATREUS_SLIM
+
+config ZMK_KEYBOARD_NAME
+    default "Atreus"
+
+endif

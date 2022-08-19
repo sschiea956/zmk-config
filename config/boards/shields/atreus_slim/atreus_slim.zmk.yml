@@ -1,0 +1,13 @@
+file_format: "1"
+id: atreus_slim
+name: Atreus
+type: shield
+url: https://github.com/sschiea956/zmk-config
+requires: 
+  - pro_micro
+exposes:
+  - i2c_oled
+features:
+  - keys
+  - display
+  - underglow
