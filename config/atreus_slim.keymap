@@ -47,7 +47,7 @@
             >;
         };
 
-        l_adj { ADJ layer with Fkeys etc
+        l_adj { // ADJ layer with Fkeys etc
 		
 		// ---------------------------------------------------------------------ctrl is left thumb key, alt is right
 		// |INSRT| HOME|  UP | END |PSCRN|     | PGUP| F7  | F8  | F9  | F10 |
@@ -65,7 +65,7 @@
             >;
         };
 		
-		l_gme { GAMING layer with WASD shifted over and modifers are on the left hand side (right half unchanged)
+		l_gme { // GAMING layer with WASD shifted over and modifers are on the left hand side (right half unchanged)
 		
 		// ---------------------------------------------------------------------top enter is left thumb key, alt is right
 		// | ESC |  Q  |  W  |  E  |  R  |     |  Y  |  U  |  I  |  O  |  P  |
