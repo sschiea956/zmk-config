@@ -52,15 +52,15 @@
 		// ---------------------------------------------------------------------ctrl is left thumb key, alt is right
 		// |INSRT| HOME|  UP | END |PSCRN|     | PGUP| F7  | F8  | F9  | F10 |
 		// | DEL | LEFT| DOWN|RIGHT| GME |     | PGDN| F4  | F5  | F6  | F11 |
-		// |     |     |     |     |     | CTRL|     | F1  | F2  | F3  | F12 |
+		// |     |     |     |     |RESET| CTRL|     | F1  | F2  | F3  | F12 |
 		// |CAPSL| TAB | GUI | SHFT| BSPC| ALT | SPC | QWR |     |     |ENTER|
 		
             bindings = <
 			
-				&kp INS   &kp HOME  &kp UP    &kp END   &kp PSCRN           &kp PG_UP &kp F7    &kp F8    &kp F9    &kp F10
-				&kp DEL   &kp LEFT  &kp DOWN  &kp RIGHT &to L_GME           &kp PG_DN &kp F4    &kp F5    &kp F6    &kp F11
-				&trans    &trans    &trans    &trans    &trans    &kp LCTRL &trans    &kp F1    &kp F2    &kp F3    &kp F12 
-				&kp CAPS  &kp TAB   &kp LGUI  &kp LSHFT &kp BSPC  &kp LALT  &kp SPACE &to L_QWR &trans    &trans    &kp ENTER
+				&kp INS   &kp HOME  &kp UP    &kp END   &kp PSCRN             &kp PG_UP &kp F7    &kp F8    &kp F9    &kp F10
+				&kp DEL   &kp LEFT  &kp DOWN  &kp RIGHT &to L_GME             &kp PG_DN &kp F4    &kp F5    &kp F6    &kp F11
+				&trans    &trans    &trans    &trans    &bootloader &kp LCTRL &trans    &kp F1    &kp F2    &kp F3    &kp F12 
+				&kp CAPS  &kp TAB   &kp LGUI  &kp LSHFT &kp BSPC    &kp LALT  &kp SPACE &to L_QWR &trans    &trans    &kp ENTER
 
             >;
         };
