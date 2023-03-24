@@ -6,6 +6,7 @@
 #define L_FN   1
 #define L_ADJ  2
 #define L_GME  3
+#define L_BT   4
 
 / {
     keymap {
@@ -52,20 +53,20 @@
 		// ---------------------------------------------------------------------ctrl is left thumb key, alt is right
 		// |INSRT| HOME|  UP | END |PSCRN|     | PGUP| F7  | F8  | F9  | F10 |
 		// | DEL | LEFT| DOWN|RIGHT| GME |     | PGDN| F4  | F5  | F6  | F11 |
-		// |     |     |     |     |RESET| CTRL|     | F1  | F2  | F3  | F12 |
+		// |     |     |     |     | BT  | CTRL|RESET| F1  | F2  | F3  | F12 |
 		// |CAPSL| TAB | GUI | SHFT| BSPC| ALT | SPC | QWR |     |     |ENTER|
 		
             bindings = <
 			
-				&kp INS   &kp HOME  &kp UP    &kp END   &kp PSCRN             &kp PG_UP &kp F7    &kp F8    &kp F9    &kp F10
-				&kp DEL   &kp LEFT  &kp DOWN  &kp RIGHT &to L_GME             &kp PG_DN &kp F4    &kp F5    &kp F6    &kp F11
-				&trans    &trans    &trans    &trans    &bootloader &kp LCTRL &trans    &kp F1    &kp F2    &kp F3    &kp F12 
-				&kp CAPS  &kp TAB   &kp LGUI  &kp LSHFT &kp BSPC    &kp LALT  &kp SPACE &to L_QWR &trans    &trans    &kp ENTER
+				&kp INS   &kp HOME  &kp UP    &kp END   &kp PSCRN           &kp PG_UP   &kp F7    &kp F8    &kp F9    &kp F10
+				&kp DEL   &kp LEFT  &kp DOWN  &kp RIGHT &to L_GME           &kp PG_DN   &kp F4    &kp F5    &kp F6    &kp F11
+				&trans    &trans    &trans    &trans    &to L_BT  &kp LCTRL &bootloader &kp F1    &kp F2    &kp F3    &kp F12 
+				&kp CAPS  &kp TAB   &kp LGUI  &kp LSHFT &kp BSPC  &kp LALT  &kp SPACE   &to L_QWR &trans    &trans    &kp ENTER
 
             >;
         };
 		
-		l_gme { // GAMING layer with WASD shifted over and modifers are on the left hand side (right half unchanged)
+		l_gme { // GAMING layer whith WASD shifted over and modifers are on the left hand side (right half unchanged)
 		
 		// ---------------------------------------------------------------------top enter is left thumb key, alt is right
 		// | ESC |  Q  |  W  |  E  |  R  |     |  Y  |  U  |  I  |  O  |  P  |
@@ -79,6 +80,24 @@
 				&kp TAB   &kp A     &kp S     &kp D     &kp F               &kp H     &kp J     &kp K     &kp L     &kp SEMI
 				&kp LSHFT &kp Z     &kp X     &kp C     &kp V     &kp ENTER &kp N     &kp M     &kp COMMA &kp DOT   &kp FSLH 
 				&kp LCTRL &kp T     &kp G     &kp B     &kp SPACE &kp LALT  &kp SPACE &to L_QWR &kp MINUS &kp SQT   &kp ENTER
+
+            >;
+        };
+		
+		l_bt { // Bluetooth Controls Layer
+		
+		// ---------------------------------------------------------------------top enter is left thumb key, alt is right
+		// |     |     |     |     |     |         |     |     |     |     |     |
+		// | BT0 | BT1 | BT2 | BT3 | BT4 |         |     |     |     |     |     |
+		// |     |     |     |BTCLR|     |         |     |     |     |     |     |
+		// |     |     |     |     |     |         |     | QWR |     |     |     |
+		
+            bindings = <
+			
+				&trans       &trans       &trans       &trans       &trans              &trans &trans    &trans &trans &trans
+				&bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4        &trans &trans    &trans &trans &trans
+				&trans       &trans       &trans       &bt BT_CLR   &trans       &trans &trans &trans    &trans &trans &trans 
+				&trans       &trans       &trans       &trans       &trans       &trans &trans &to L_QWR &trans &trans &trans
 
             >;
         };
